@@ -142,6 +142,9 @@ li {
 }
 
 .about_description {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
     padding: 1%;
     border-radius: 2px;
     background-color: rgba(218, 234, 242, 0.213);
