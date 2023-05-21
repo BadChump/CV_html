@@ -325,6 +325,14 @@ li {
     border-radius: 2px;
     background-color: rgba(218, 234, 242, 0.213);
     box-shadow: 0 0 10px rgba(36, 40, 43, 0.5);
+    position: relative;
+}
+
+.datetime {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 14px;
 }
 
 .footer_links {
