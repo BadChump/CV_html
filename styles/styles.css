@@ -402,10 +402,6 @@ li {
 
 @media screen and (max-width: 620px) {
 
-    .body {
-        font-size: 1.1em;
-    }
-
     .header {
         display: flex;
         flex-direction: column;
@@ -421,18 +417,22 @@ li {
 
     .description {
         flex-direction: column;
+        width: 85%;
         margin: 0 auto;
-        padding: 2%;
     }
 
     .name {
-        width: 100%;
+        width: 70%;
+        margin: 0 auto;
         text-align: center;
+    }
 
+    .name_description {
+        margin: 5% auto;
     }
 
     .contact_links {
-        grid-template-columns: 30% 30% 30%;
+        grid-template-columns: 25% 25% 25%;
         justify-content: space-around;
     }
 
