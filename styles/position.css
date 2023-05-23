@@ -1,7 +1,7 @@
 html {
     display: flex;
     background-color: black;
-    background-image: linear-gradient(to bottom right, rgb(1, 10, 16) 15%, rgb(11, 99, 154));
+    background-image: linear-gradient(to bottom right, rgb(1, 10, 16) 25%, rgb(11, 99, 154));
     overflow: hidden;
     height: 100%;
     margin: 0;
@@ -130,7 +130,7 @@ img {
     border-radius: 10px;
     margin: 0;
     opacity: 0;
-    animation: slideInLeft 1s forwards, expandHeight 1s forwards;
+    animation: fallFromAbove 1s forwards;
 }
 
 
@@ -149,7 +149,7 @@ img {
     overflow-y: auto;
     scrollbar-width: thin;
     opacity: 0;
-    animation: slideInRight 1s forwards, expandHeight 1s forwards;
+    animation: fallFromAbove 1s forwards;
 }
 
 .description::-webkit-scrollbar {
@@ -190,7 +190,7 @@ img {
 }
 
 /* Animation for sliding in the photo from the left */
-@keyframes slideInLeft {
+/* @keyframes slideInLeft {
     0% {
         transform: translateX(-100%);
         opacity: 0;
@@ -200,10 +200,10 @@ img {
         transform: translateX(0);
         opacity: 1;
     }
-}
+} */
 
 /* Animation for sliding in the description from the right */
-@keyframes slideInRight {
+/* @keyframes slideInRight {
     0% {
         transform: translateX(100%);
         opacity: 0;
@@ -211,6 +211,18 @@ img {
 
     100% {
         transform: translateX(0);
+        opacity: 1;
+    }
+} */
+
+@keyframes fallFromAbove {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
         opacity: 1;
     }
 }
@@ -229,7 +241,7 @@ img {
 .arrow-6 {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 120%;
     justify-content: space-between;
     margin: 0;
 }
