@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>experience</title>
+    <link type="image/x-icon" href="img/icons8-резюме-100.png" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="styles/experiience.css">
+
+    <script>
+        window.onload = function () {
+            var descriptionElement = document.querySelector(".description");
+            var containerElement = document.querySelector(".container");
+            var sentences = [
+                "This tab contains information about my experience.",
+                "I'll start with the last one...",
+                "                     ",
+                "02/2022 - present",
+                "Organization: Affiliate program",
+                "Position: Media Buyer",
+                "Description:",
+                "— analytics in Binom and Keitaro trackers",
+                "— web, in-app",
+                "— native, teaser, push, popunder",
+                "— nutra, dating, gambling, sweeps, utilities",
+                "— creation and optimization of landing pages",
+                "— creation of creatives",
+                "— hypothesis testing",
+                "— scaling",
+                "— placement optimization",
+                "— A/B testing",
+                "— calculation unit of the economy",
+                "— cloaking",
+                "— Tier 1/2/3",
+                "— 1000$ daily",
+                "                                       ",
+                "01/2021 - 02/2022",
+                "Organization: Cartravel",
+                "Position: Contextual advertising specialist",
+                "Description:",
+                "— advertising campaign planning",
+                "— development of strategies and hypotheses",
+                "— creation of contextual advertising",
+                "— BID calculation",
+                "— setting up advertisements",
+                "— analytics setup",
+                "— analysis of effectiveness adjustment of campaigns",
+                "— campaign testing",
+                "— A/B testing",
+                "— analysis and optimization",
+                "— sales analysis and weekly reporting",
+                "                                       ",
+                "04/2016 - 06/2021",
+                "Organization: TechStroyKomplekt",
+                "Position: Founder and CEO",
+                "Description:",
+                "— supply of imported welding equipment and materials (EWM, Kemppi, Lincoln Electric) to construction projects in the oil and gas industry",
+                "— budget planning",
+                "— business negotiations",
+                "— contract signing",
+                "— tax reporting",
+                "                                       ",
+                "and more in DM"
+            ];
+
+            var index = 0;
+            var sentenceIndex = 0;
+            var charIndex = 0;
+            var printInterval;
+
+            function printText() {
+                if (index < sentences.length) {
+                    var currentSentence = sentences[index];
+                    if (sentenceIndex < currentSentence.length) {
+                        descriptionElement.innerHTML += currentSentence.charAt(sentenceIndex);
+                        sentenceIndex++;
+                        descriptionElement.scrollTop = descriptionElement.scrollHeight;
+                        containerElement.scrollIntoView(false);
+                    } else {
+                        descriptionElement.innerHTML += "<br><br>";
+                        sentenceIndex = 0;
+                        index++;
+                        descriptionElement.scrollTop = descriptionElement.scrollHeight;
+                        containerElement.scrollIntoView(false);
+                    }
+                } else {
+                    clearInterval(printInterval);
+                }
+            }
+
+            printInterval = setInterval(printText, 10);
+
+        };
+    </script>
+</head>
+
+<body class="body">
+
+    <header class="header">
+        <div class="header_buttons">
+            <a href="index.html" class="header_button">home</a>
+            <a href="about.html" class="header_button">about</a>
+            <a href="position.html" class="header_button">position</a>
+            <a href="#" class="header_button button_active">experience</a>
+            <a href="skills.html" class="header_button">skills</a>
+            <a href="#" class="header_button">education</a>
+            <a href="#" class="header_button">languages</a>
+            <a href="#" class="header_button">hobbies</a>
+            <a href="#" class="header_button">contacts</a>
+        </div>
+    </header>
+
+    <section class="container">
+
+
+        <div class="based">
+            <img src="img/fine.png" class="photo">
+            <div class="description"></div>
+        </div>
+
+        <div class="arrow-6">
+            <a href="position.html">
+                <svg width="18px" height="17px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
+                        <polygon class="arrow-6-pl"
+                            points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596">
+                        </polygon>
+                        <polygon class="arrow-6-pl-fixed"
+                            points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596">
+                        </polygon>
+                        <path
+                            d="M-1.48029737e-15,0.56157424 L-1.48029737e-15,16.1929159 L9.708,8.33860465 L-2.66453526e-15,0.56157424 L-1.48029737e-15,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z">
+                        </path>
+                    </g>
+                </svg>
+            </a>
+            <a href="skills.html">
+                <svg width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g>
+                        <polygon class="arrow-6-pl"
+                            points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596">
+                        </polygon>
+                        <polygon class="arrow-6-pl-fixed"
+                            points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596">
+                        </polygon>
+                        <path
+                            d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z">
+                        </path>
+                    </g>
+                </svg>
+            </a>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2023. Pavel CV. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
