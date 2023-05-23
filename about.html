@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about me</title>
+    <link type="image/x-icon" href="img/icons8-резюме-100.png" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="styles/about.css">
+
+    <script>
+        window.onload = function () {
+            var descriptionElement = document.querySelector(".description");
+            var containerElement = document.querySelector(".container");
+            var sentences = [
+                "Hey! I'm Pavel and this is my CV...",
+                "In this tab, I will briefly talk about me and my experience...",
+                "Go!",
+                "Today, " + getFormattedDate(new Date()) + ", I am " + calculateAge(new Date(1988, 10, 26)) + " years old, I am still very young, but already quite experienced.",
+                "I have a beautiful wife, no children yet.",
+                "Now I live in Armenia and I am considering options for working both in Armenia and with a possible relocation.",
+                "I have Russian citizenship, but I am categorically against the war and against Putin.",
+                "I have extensive experience in sales, procurement of household appliances, and electronics.",
+                "I also have significant experience in managing my own B2B business, specializing in the sales of industrial equipment.",
+                "Since 2021, I have been engaged in online marketing. I have attracted clients for a transportation company through contextual and targeted advertising.",
+                "Since 2022, I have been working as part of the media buyers team in an affiliate program. I create creatives, crafting clickbait headlines, develop and test hypotheses, and scale successful campaigns. I am proficient in using an anti-detection browser and have experience setting up cloaking techniques.",
+                "Now digital marketing is my life :)",
+                "I want to utilize my skills and further develop in the field of online marketing.",
+                "In the 'experience' tab, you can learn more about my experience.",
+
+                "☮ I am for peace ☮",
+                "#noPutin #noWar #IStandWithUkraine",
+            ];
+
+            var index = 0;
+            var sentenceIndex = 0;
+            var charIndex = 0;
+            var printInterval;
+
+            function printText() {
+                if (index < sentences.length) {
+                    var currentSentence = sentences[index];
+                    if (sentenceIndex < currentSentence.length) {
+                        descriptionElement.innerHTML += currentSentence.charAt(sentenceIndex);
+                        sentenceIndex++;
+                        descriptionElement.scrollTop = descriptionElement.scrollHeight;
+                        containerElement.scrollIntoView(false);
+                    } else {
+                        descriptionElement.innerHTML += "<br><br>";
+                        sentenceIndex = 0;
+                        index++;
+                        descriptionElement.scrollTop = descriptionElement.scrollHeight;
+                        containerElement.scrollIntoView(false);
+                    }
+                } else {
+                    clearInterval(printInterval);
+                }
+            }
+
+            printInterval = setInterval(printText, 60);
+
+            function calculateAge(birthDate) {
+                var ageDiffMs = Date.now() - birthDate.getTime();
+                var ageDate = new Date(ageDiffMs);
+                return Math.abs(ageDate.getUTCFullYear() - 1970);
+            }
+
+            function getFormattedDate(date) {
+                var options = { year: 'numeric', month: 'long', day: 'numeric' };
+                return date.toLocaleDateString('en-US', options);
+            }
+        };
+    </script>
+</head>
+
+<body class="body">
+
+    <header class="header">
+        <div class="header_buttons">
+            <a href="index.html" class="header_button">home</a>
+            <a href="#" class="header_button button_active">about</a>
+            <a href="#" class="header_button">position</a>
+            <a href="#" class="header_button">experience</a>
+            <a href="#" class="header_button">skills</a>
+            <a href="#" class="header_button">education</a>
+            <a href="#" class="header_button">languages</a>
+            <a href="#" class="header_button">hobbies</a>
+            <a href="#" class="header_button">contacts</a>
+        </div>
+    </header>
+
+    <section class="container">
+        <img src="img/photo_2023-05-22 20.25.31.png" class="photo">
+        <div class="description"></div>
+        <!-- <div class="arrows">
+            <a class="left_arrow" href="index.html">
+            <a class="right_arrow" href="position.html">
+        </div> -->
+    </section>
+
+    
+
+    <!-- <style>
+        .arrows {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: 110%;
+            justify-content: space-between;
+        }
+
+        .left_arrow {
+            max-width: 3%;
+            height: 5%;
+            background-color: rgb(43, 171, 250);
+            background-image: linear-gradient(to bottom right, rgb(43, 171, 250) 60%, rgb(193, 226, 247));
+            box-shadow: 0 0 10px rgba(36, 40, 43, 0.8);
+        }
+    </style> -->
+
+    <footer class="footer">
+        <p>&copy; 2023. Pavel CV. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
